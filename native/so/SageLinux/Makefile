@@ -17,7 +17,7 @@
 # set system name (will be Linux or Darwin)
 UNAME_S := $(shell uname -s)
 
-JDK_HOME ?= /usr/local/j2sdk
+#JDK_HOME ?= /usr/local/j2sdk
 #JAVA_ARCH ?= i386
 JAVA_ARCH ?= amd64
 
