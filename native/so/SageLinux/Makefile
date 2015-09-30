@@ -18,10 +18,11 @@
 UNAME_S := $(shell uname -s)
 
 #JDK_HOME ?= /usr/local/j2sdk
-JDK_HOME ?= /usr/lib/jvm/java-7-oracle/jre
+JDK_HOME ?= /usr/lib/jvm/java-7-oracle/jdk
 #JAVA_ARCH ?= i386
 JAVA_ARCH ?= amd64
 
+ls /usr/lib/jvm/java-7-oracle/
 
 CC=gcc
 #CC=mipsel-unknown-linux-gnu-gcc
