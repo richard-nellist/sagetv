@@ -1,2 +1,12 @@
+---
 language: java
-script: cd build && ./buildall.sh
+before_install:
+  - sudo apt-get update -qq
+  - sudo apt-get install -qq libraw1394-dev libavc1394-dev libiec61883-dev libfreetype6-dev yasm jhead
+jdk:
+  - openjdk7
+script:
+  - export JDK_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+  - cd build
+  - ./buildall.sh
+
