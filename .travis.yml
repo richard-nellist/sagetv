@@ -1,2 +1,2 @@
 language: java
-script: build/buildall.sh
+script: cd build && ./buildall.sh
