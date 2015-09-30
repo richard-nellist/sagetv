@@ -18,6 +18,7 @@
 UNAME_S := $(shell uname -s)
 
 #JDK_HOME ?= /usr/local/j2sdk
+JDK_HOME ?= /usr/lib/jvm/java-7-oracle/jre
 #JAVA_ARCH ?= i386
 JAVA_ARCH ?= amd64
 
