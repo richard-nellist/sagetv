@@ -22,8 +22,6 @@ JDK_HOME ?= /usr/lib/jvm/java-7-oracle/jdk
 #JAVA_ARCH ?= i386
 JAVA_ARCH ?= amd64
 
-ls /usr/lib/jvm/java-7-oracle/
-
 CC=gcc
 #CC=mipsel-unknown-linux-gnu-gcc
 CFLAGS = -c -fPIC -I$(JDK_HOME)/include -I$(JDK_HOME)/include/linux -D_FILE_OFFSET_BITS=64
