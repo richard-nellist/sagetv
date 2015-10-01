@@ -1,3 +1,4 @@
+image:https://travis-ci.org/richard-nellist/sagetv.svg?branch=master["Build Status", link="https://travis-ci.org/richard-nellist/sagetv"]
 This file outlines the overall directory layout for the SageTV codebase,
  what all the various components in it and what you need to build it on
  different platforms.

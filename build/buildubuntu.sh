@@ -38,7 +38,7 @@ sed -i "s/MAJOR_VERSION/$MAJOR_VERSION/g" ubuntuserver/DEBIAN/control
 sed -i "s/MINOR_VERSION/$MINOR_VERSION/g" ubuntuserver/DEBIAN/control
 sed -i "s/MICRO_VERSION/$MICRO_VERSION/g" ubuntuserver/DEBIAN/control
 sed -i "s/DEB_ARCH/$DEB_ARCH/g" ubuntuserver/DEBIAN/control
-dpkg -b ubuntuserver sagetv-server_"$MAJOR_VERSION"."$MINOR_VERSION"."$MICRO_VERSION"_"$DEB_ARCH".deb
+dpkg -b ubuntuserver release/sagetv-server_"$MAJOR_VERSION"."$MINOR_VERSION"."$MICRO_VERSION"_"$DEB_ARCH".deb
 
 echo Building client package
 rm -rf ubuntuclient
@@ -56,4 +56,4 @@ sed -i "s/DEB_ARCH/$DEB_ARCH/g" ubuntuclient/DEBIAN/control
 sed -i "s/MAJOR_VERSION/$MAJOR_VERSION/g" ubuntuclient/usr/share/applications/sagetv.desktop
 sed -i "s/MINOR_VERSION/$MINOR_VERSION/g" ubuntuclient/usr/share/applications/sagetv.desktop
 sed -i "s/MICRO_VERSION/$MICRO_VERSION/g" ubuntuclient/usr/share/applications/sagetv.desktop
-dpkg -b ubuntuclient sagetv-client_"$MAJOR_VERSION"."$MINOR_VERSION"."$MICRO_VERSION"_"$DEB_ARCH".deb
+dpkg -b ubuntuclient release/sagetv-client_"$MAJOR_VERSION"."$MINOR_VERSION"."$MICRO_VERSION"_"$DEB_ARCH".deb
