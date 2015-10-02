@@ -9,11 +9,12 @@ jdk:
 script:
   - export JDK_HOME=$JAVA_HOME
   - cd build
-  - ./buildsage.sh
-  - ./buildmini.sh
-  - ./buildso.sh
-  - ./build3rdparty.sh
-  - ./copyserverfiles.sh
-  - ./buildtarballs.sh
-  - ./buildubuntu.sh
+  - ./buildsage.sh || { echo "Build failed, exiting."; exit 1; }
+  - ./buildmini.sh || { echo "Build failed, exiting."; exit 1; }
+  - ./buildso.sh || { echo "Build failed, exiting."; exit 1; }
+  - ./build3rdparty.sh || { echo "Build failed, exiting."; exit 1; }
+  - ./copyserverfiles.sh || { echo "Build failed, exiting."; exit 1; }
+  - ./copyclientfiles.sh || { echo "Build failed, exiting."; exit 1; }
+  - ./buildtarballs.sh || { echo "Build failed, exiting."; exit 1; }
+  - ./buildubuntu.sh || { echo "Build failed, exiting."; exit 1; }
 
