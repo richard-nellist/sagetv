@@ -7,7 +7,7 @@ before_install:
 jdk:
   - oraclejdk8
 script:
-  - export JDK_HOME=%JAVA_HOME
+  - export JDK_HOME=$JAVA_HOME
   - cd build
   - ./buildsage.sh
   - ./buildmini.sh
