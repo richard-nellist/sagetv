@@ -2,11 +2,18 @@
 language: java
 before_install:
   - sudo apt-get update -qq
-  - sudo apt-get install -qq libraw1394-dev libavc1394-dev libiec61883-dev libfreetype6-dev yasm jhead
+  - sudo apt-get install -qq libx11-dev libxt-dev libraw1394-dev libavc1394-dev libiec61883-dev libfreetype6-dev yasm autoconf libtool build-essential jhead
+  - sudo apt-get install -qq libaudio-dev libpulse-dev libasound-dev
 jdk:
-  - openjdk7
+  - oraclejdk8
 script:
-  - export JDK_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+  - export JDK_HOME=%JAVA_HOME
   - cd build
-  - ./buildall.sh
+  - ./buildsage.sh
+  - ./buildmini.sh
+  - ./buildso.sh
+  - ./build3rdparty.sh
+  - ./copyserverfiles.sh
+  - ./buildtarballs.sh
+  - ./buildubuntu.sh
 
