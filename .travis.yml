@@ -16,4 +16,9 @@ script:
   - ./copyclientfiles.sh
   - ./buildtarballs.sh
   - ./buildubuntu.sh
-
+deploy:
+  provider: bintray
+  file: "build/binfiles.publish"
+  user: $bintray_user
+  key: $bintray_key
+  dry-run: true
