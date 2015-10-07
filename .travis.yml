@@ -2,10 +2,9 @@
 language: java
 before_install:
   - sudo apt-get update -qq
-  - sudo apt-get install -qq libx11-dev libxt-dev libraw1394-dev libavc1394-dev libiec61883-dev libfreetype6-dev yasm autoconf libtool build-essential jhead
-  - sudo apt-get install -qq libaudio-dev libpulse-dev libasound-dev
+  - sudo apt-get install -y unzip build-essential git libx11-dev libxt-dev libraw1394-dev libavc1394-dev libiec61883-dev libfreetype6-dev yasm autoconf libtool openjdk-7-jdk libfaac0 libaudio-dev libpulse-dev libasound-dev
 jdk:
-  - oraclejdk8
+  - openjdk7
 script:
   - export JDK_HOME=$JAVA_HOME
   - cd build
