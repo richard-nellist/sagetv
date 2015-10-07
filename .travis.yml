@@ -18,7 +18,7 @@ script:
   - ./buildubuntu.sh
 deploy:
   provider: bintray
-  file: "build/binfiles.publish"
+  file: "$TRAVIS_BUILD_DIR/build/binfiles.publish"
   user: $bintray_user
   key: $bintray_key
   dry-run: true
